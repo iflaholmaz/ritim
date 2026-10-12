@@ -1,0 +1,13 @@
+{
+  "name": "ritim-windows",
+  "version": "1.3.0",
+  "private": true,
+  "description": "Windows için yerel yaşam, su ve alışkanlık takibi",
+  "scripts": {
+    "test": "node tests/core.test.cjs && node tests/scheduler.test.cjs",
+    "start": "electron src",
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1"
+  },
+  "devDependencies": { "electron": "44.7.0" }
+}
+

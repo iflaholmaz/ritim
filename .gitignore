@@ -1,0 +1,11 @@
+node_modules/
+build/
+dist/
+*.log
+kayitlar*.json
+alarmlar.json
+yedekler/
+test-data*/
+.env*
+work/
+

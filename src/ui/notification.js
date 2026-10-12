@@ -1,0 +1,3 @@
+async function initNotice(){let n=await window.ritim.notice();document.documentElement.dataset.theme=n.theme;document.getElementById('title').textContent=n.title;document.getElementById('body').textContent=n.body;let buttons=n.meta.kind==='water'?`<button class="primary" onclick="act('water')">250 ml içtim</button>`:`<button class="primary" onclick="act('complete')">Tamamlandı</button>`;document.getElementById('actions').innerHTML=buttons+`<button onclick="act('snooze')">10 dakika ertele</button><button onclick="window.ritim.showMain()">Uygulamayı aç</button>`}
+async function act(name){try{await window.ritim.noticeAction(name)}catch(e){document.getElementById('body').textContent='İşlem kaydedilemedi. Uygulamadan tekrar dene.'}}initNotice();
+
